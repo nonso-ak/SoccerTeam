@@ -10,20 +10,20 @@ burger.addEventListener('click', () => {
 
 
 
-// function toggleContact(platform) {
-//     const info = document.getElementById(`${platform}-info`);
-//     const allInfo = document.getElementsByClassName('contact-info');
+function toggleContact(platform) {
+    const info = document.getElementById(`${platform}-info`);
+    const allInfo = document.getElementsByClassName('contact-info');
     
-//     // Remove active class from all info elements
-//     Array.from(allInfo).forEach(element => {
-//         element.classList.remove('active');
-//     });
+    // Remove active class from all info elements
+    Array.from(allInfo).forEach(element => {
+        element.classList.remove('active');
+    });
     
-//     // Toggle active class on clicked element
-//     if (!info.classList.contains('active')) {
-//         info.classList.add('active');
-//     }
-// }
+    // Toggle active class on clicked element
+    if (!info.classList.contains('active')) {
+        info.classList.add('active');
+    }
+}
 
 // document.querySelectorAll('.nav-links a').forEach(link => {
 //     link.addEventListener('click', () => {
