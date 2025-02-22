@@ -344,6 +344,8 @@ section {
     font-family: Arial, sans-serif;
     max-width: 1200px;
     margin: 20px auto;
+    padding: 0 15px;
+    overflow-x: hidden;
   }
   
   .main-header {
@@ -372,21 +374,28 @@ section {
     color: #666;
     margin-bottom: 5px;
   }
+  .table-wrapper{
+    width: 100%;
+    overflow-x: auto;
+  }
   
   table {
     width: 100%;
+    min-width: 800px; 
     border-collapse: collapse;
     background-color: white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   }
   
+  
   th {
     background-color: #f31818;
     color: white;
-    padding: 12px;
+    padding: 12px 8px;
     text-align: left;
     font-weight: bold;
     border-right: 1px solid black;
+    white-space: nowrap;
   }
   
   th:last-child {
@@ -398,6 +407,9 @@ section {
     border-bottom: 1px solid black;
     border-right: 1px solid black;
     text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   td:last-child {
@@ -411,6 +423,15 @@ section {
   tr:hover {
     background-color: #f5f5f5;
   }
+
+  th:nth-child(1), td:nth-child(1) { width: 8%; }  /* Day */
+  th:nth-child(2), td:nth-child(2) { width: 10%; } /* Date */
+  th:nth-child(3), td:nth-child(3) { width: 8%; }  /* Time */
+  th:nth-child(4), td:nth-child(4) { width: 12%; } /* Status */
+  th:nth-child(5), td:nth-child(5) { width: 5%; }  /* # */
+  th:nth-child(6), td:nth-child(6) { width: 20%; } /* Visitors */
+  th:nth-child(7), td:nth-child(7) { width: 20%; } /* Home */
+  th:nth-child(8), td:nth-child(8) { width: 17%; } /*
 
 /* Gallery Section with 7 Images */
 #gallery h2{
@@ -830,34 +851,43 @@ html {
     .hero-image{
          height: 100vh;
     }
-    
-      .schedule-container {
+    .schedule-container {
         padding: 0 5px;
+        margin: 10px auto;
       }
       
-      th, td {
-        font-size: 12px;
-        padding: 4px 2px;
+      .main-header {
+        font-size: 22px;
       }
-
+      
+      .sub-header {
+        font-size: 18px;
+      }
   
-      /* .col-day { width: 30px; }
-      .col-date { width: 40px; }
-      .col-time { width: 50px; }
-      .col-status { width: 40px; }
-      .col-number { width: 25px; }
-      .col-visitors {width: 40px;}
-      .col-team { width: 40px; }
-      .col-venue { width: calc(100% - 405px); min-width: 80px; }
-    
-    /* } */
-    .schedule-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      /* Custom scrollbar for better UX */
+      .table-wrapper::-webkit-scrollbar {
+        height: 6px;
+      }
+  
+      .table-wrapper::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+  
+      .table-wrapper::-webkit-scrollbar-thumb {
+        background: #f31818;
+        border-radius: 3px;
+      }
+  
+      table {
+        font-size: 14px;
+      }
+  
+      th, td {
+        padding: 8px 6px;
+      }
     }
     
-}
+
 
 
 
@@ -886,6 +916,22 @@ html {
     .mission-statement {
         padding: 1rem;
     }
+
+    .main-header {
+        font-size: 20px;
+      }
+      
+      .sub-header {
+        font-size: 16px;
+      }
+  
+      table {
+        font-size: 13px;
+      }
+  
+      th, td {
+        padding: 6px 4px;
+      }
 }
 
 @media (min-height: 1000px) {
