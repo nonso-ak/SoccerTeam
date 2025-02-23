@@ -167,6 +167,7 @@ nav {
     letter-spacing: 1px;
     /* line-height: 1.2; */
     text-transform: uppercase;
+   
 }
 
 
@@ -362,10 +363,9 @@ section {
 
   .main-header hr{
     width: 50px;
-    margin-left: 51px;
     background-color: #f31818;
     padding: 1px; 
-    margin-right: 13px;
+  
   }
   
   .sub-header {
@@ -448,7 +448,7 @@ section {
     width: 50px;
     background-color: #f31818;
     padding: 1px;
-    margin-left: 28px;
+
 }
 .gallery-grid {
     display: grid;
@@ -806,6 +806,7 @@ html {
     }
     .home-content h2 {
         font-size: 16px;
+        margin-top: 33vh;
     }
 
     .home-content {
@@ -884,6 +885,19 @@ html {
   
       th, td {
         padding: 8px 6px;
+      }
+
+     #gallery h2{
+        font-size: 1.5rem;
+      }
+      #team h2{
+        font-size: 1.5rem;
+      }
+      #about h2{
+        font-size: 1.5rem;
+      }
+      .logodiv h1{
+          font-size: 18px;
       }
     }
     
