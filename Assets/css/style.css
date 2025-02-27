@@ -328,6 +328,15 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+.player-image5{
+    width: 170px;
+    height: 250px;
+    background-color: #ddd;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
 .player-image {
     width: 200px;
     height: 250px;
